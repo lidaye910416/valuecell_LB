@@ -1,0 +1,38 @@
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.pytest_cache/
+
+# Environments
+.env
+.venv
+venv/
+valuecell_env/
+
+### macOS ###
+.DS_Store
+
+### VS Code ###
+.vscode/
+
+### SQLite ###
+*.sqlite
+*.sqlite3
+*.db
+
+### Logs ###
+logs
+*.log
+
+# uv lock file
+uv.lock

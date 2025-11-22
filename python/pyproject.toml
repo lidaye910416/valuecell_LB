@@ -42,3 +42,7 @@ dev = [
 line-length = 88
 indent-width = 4
 target-version = "py312"
+
+[tool.uv.venv]
+# 指定虚拟环境名称（项目根目录下的 valuecell_env）
+name = "valuecell_env"
