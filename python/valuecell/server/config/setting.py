@@ -1,1 +1,0 @@
-from pydatic_settings import BaseSettings
