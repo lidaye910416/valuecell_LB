@@ -44,4 +44,4 @@ class SuccessResponse(BaseResponse[T]):
     @classmethod
     def create(cls, data: T = None, msg: str = "success") -> "SuccessResponse[T]":
         """Create success response."""
-        return cls(code=StatusCode.SUCCESS, msg=msg, data=data)
+        return cls(code = StatusCode.SUCCESS, msg=msg, data=data)

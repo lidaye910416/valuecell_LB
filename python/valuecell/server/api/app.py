@@ -38,19 +38,23 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
+    API_PREFIX = "/api/v1" 
+
     # Basic routes
     @app.get("/", response_model=SuccessResponse[AppInfoData])
     async def home_page():
         # return {"message": "Welcome to ValueCell Learning Path API"}
-        return {"code": 0, "msg": "success", "data": {
-            "name": settings.APP_NAME,
-            "version": settings.APP_VERSION,
-            "environment": settings.APP_ENVIRONMENT,
-        }}
+        return SuccessResponse.create(
+            data=AppInfoData(
+                name=settings.APP_NAME,
+                version=settings.APP_VERSION,
+                environment=settings.APP_ENVIRONMENT,
+            )
+        )
 
-    @app.get("/health")
+    @app.get(f"{API_PREFIX}/healthz", response_model=SuccessResponse)
     async def health_check():
-        return {"status": "healthy"}
+        return SuccessResponse.create(msg="Welcome to ValueCell Learning Path API")
     
     
 
