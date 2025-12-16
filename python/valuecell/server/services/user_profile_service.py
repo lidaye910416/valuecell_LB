@@ -4,11 +4,12 @@ import logging
 from typing import Dict, List, Optional
 
 from ..db.models.user_profile import ProfileCategory 
+from ..db.repositories.user_profile_repository  import UserProfileRepository
 
 
 class UserProfileService:
     """Service class for user profile management."""
-
+    #TODO: implement methods
     pass
 
 _user_profile_service: Optional["UserProfileService"] = None
