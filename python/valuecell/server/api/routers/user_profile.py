@@ -3,6 +3,9 @@ from fastapi import APIRouter, HTTPException, Path, Query
 
 from ..schemas import SuccessResponse
 from ...db.models.user_profile import ProfileCategory
+
+from ...services.user_profile_service import get_user_profile_service
+
 from ..schemas import (
     UserProfileData,
     CreateUserProfileRequest,
